@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sua Mentoria — Construa e Escale no Digital</title>
+  <meta name="color-scheme" content="dark light" />
+  <title>Material Black — Arsenal profissional em preto & branco</title>
   <meta name="description" content="Landing page leve e responsiva para mentoria/assinatura.">
   <style>
     /* ===== CSS Base/Design Tokens ===== */
     :root{
-      --bg:#0b1020;          /* Fundo geral escuro com nuance azul */
-      --panel:#0f1630;       /* Painéis/cards */
-      --panel-2:#111a3a;
-      --text:#e9ecf5;        /* Texto principal */
-      --muted:#a8b1d1;       /* Texto secundário */
-      --primary:#6c7cff;     /* Acento principal (indigo) */
-      --primary-2:#3a49ff;   /* Acento hover */
+      --bg:#0a0a0a;          /* Fundo geral escuro com nuance azul */
+      --panel:#101013;       /* Painéis/cards */
+      --panel-2:#151517;
+      --text:#f4f4f5;        /* Texto principal */
+      --muted:#b7b7c0;       /* Texto secundário */
+      --primary:#ffffff;     /* Acento principal (indigo) */
+      --primary-2:#d9d9d9;   /* Acento hover */
       --radius:14px;
       --radius-sm:10px;
       --shadow:0 10px 30px rgba(0,0,0,.35);
@@ -25,9 +26,7 @@
     html,body{height:100%}
     body{
       margin:0;
-      background: radial-gradient(1200px 600px at 70% -10%, rgba(108,124,255,.25), transparent 60%),
-                  radial-gradient(1200px 600px at 20% 120%, rgba(58,73,255,.2), transparent 60%),
-                  var(--bg);
+      background: var(--bg);
       color:var(--text);
       font: 500 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
       -webkit-font-smoothing:antialiased;
@@ -42,7 +41,7 @@
     /* ===== Header ===== */
     .site-header{
       position:sticky;top:0;z-index:50;
-      background: rgba(11,16,32,.72);
+      background: rgba(0,0,0,.72);
       backdrop-filter: blur(14px);
       border-bottom:1px solid rgba(255,255,255,.06);
     }
@@ -110,11 +109,7 @@
     @keyframes shimmer{0%{background-position:-120px 0}100%{background-position:120px 0}}
     .caption{font-size:13px;color:var(--muted)}
 
-    .hero-gradient{
-      position:absolute;inset:auto 0 -120px 0;height:280px;
-      background: radial-gradient(60% 50% at 50% 0%, rgba(108,124,255,.25), transparent 70%);
-      filter:blur(20px);pointer-events:none
-    }
+    .hero-gradient{position:absolute;inset:auto 0 -120px 0;height:280px;background: radial-gradient(60% 50% at 50% 0%, rgba(255,255,255,.10), transparent 70%);filter:blur(20px);pointer-events:none}
 
     /* ===== Logos ===== */
     .section-logos{padding:10px 0 28px}
@@ -133,19 +128,19 @@
     .grid{display:grid;gap:18px}
     .features-grid{grid-template-columns:repeat(4,1fr)}
     .feature{padding:20px;transition:transform .12s ease, border-color .2s}
-    .feature:hover{transform:translateY(-3px);border-color:rgba(108,124,255,.4)}
-    .icon-circle{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(108,124,255,.18);margin-bottom:10px}
-    .icon-circle svg{fill:#dfe4ff;width:22px;height:22px;opacity:.95}
+    .feature:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.20)}
+    .icon-circle{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.10);margin-bottom:10px}
+    .icon-circle svg{fill:#f2f2f2;width:22px;height:22px;opacity:.95}
 
     /* ===== Pricing ===== */
-    .pricing-grid{grid-template-columns:repeat(3,1fr);align-items:stretch}
+    .pricing-grid{grid-template-columns:1fr;align-items:stretch;max-width:720px;margin-inline:auto}
     .price{padding:22px;display:flex;flex-direction:column;gap:12px}
     .price h3{margin:0;font-size:18px}
     .price-value{font-size:26px;margin:2px 0 10px}
     .price-value strong{font-size:40px}
     .price-list{list-style:none;padding:0;margin:0;display:grid;gap:8px;color:var(--muted)}
-    .pill{align-self:flex-start;font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(108,124,255,.18);border:1px solid rgba(108,124,255,.35);margin:-6px 0 4px}
-    .highlight{border-color:rgba(108,124,255,.5);box-shadow:0 12px 30px rgba(108,124,255,.2)}
+    .pill{align-self:flex-start;font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.20);margin:-6px 0 4px}
+    .highlight{border-color:rgba(255,255,255,.35);box-shadow:0 12px 30px rgba(255,255,255,.10)}
     .footnote{text-align:center;color:var(--muted);margin-top:10px}
 
     /* ===== Testimonials (carousel) ===== */
@@ -165,7 +160,7 @@
     .acc-content{padding:0 18px 16px;color:var(--muted)}
 
     /* ===== CTA final ===== */
-    .section-cta{padding:56px 0;background:linear-gradient(180deg, rgba(108,124,255,.18), rgba(108,124,255,0))}
+    .section-cta{padding:56px 0;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,0))}
     .cta-inner{text-align:center}
     .section-cta .btn{margin-top:8px}
 
@@ -187,7 +182,7 @@
     @media (max-width: 820px){
       .nav-toggle{display:flex}
       .nav-menu{
-        position:fixed;inset:64px 0 auto 0;padding:16px 20px;background:rgba(11,16,32,.96);
+        position:fixed;inset:64px 0 auto 0;padding:16px 20px;background:rgba(0,0,0,.96);
         border-bottom:1px solid rgba(255,255,255,.08);
         transform:translateY(-120%);transition:transform .25s ease;flex-direction:column;align-items:flex-start;gap:12px
       }
@@ -196,6 +191,229 @@
       .nav-cta .btn{width:100%}
       .hide-sm{display:none}
     }
+  
+    /* ===== Enhancements de responsividade ===== */
+    img, svg { height:auto; }
+    .container { padding: 0 clamp(12px, 3vw, 20px); }
+    .section { padding: clamp(36px, 8vw, 64px) 0; }
+    .btn { min-height: 44px; touch-action: manipulation; }
+    .btn-lg { font-size: clamp(15px, 3.8vw, 17px); }
+    .hero-title { font-size: clamp(24px, 7vw, 48px); }
+    .hero-subtitle { font-size: clamp(14px, 3.6vw, 18px); max-width: 65ch; }
+    .price-value strong { font-size: clamp(28px, 8vw, 40px); }
+
+    /* Safe-area (iPhone com notch) */
+    @supports (padding: env(safe-area-inset-top)) {
+      .site-header { padding-top: env(safe-area-inset-top); }
+    }
+
+    /* Breakpoint ≤ 980px já existe; complementos abaixo */
+    @media (max-width: 980px){
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .badge { font-size: 12px; }
+    }
+
+    /* Breakpoint ≤ 640px */
+    @media (max-width: 640px){
+      .header-inner { min-height: 60px; }
+      .hero-inner { gap: 24px; }
+      .mockup-card { max-width: 100%; }
+      .features-grid { grid-template-columns: 1fr; }
+      .logos-row { gap: 8px; }
+      .logo-pill { font-size: 12px; padding: 7px 10px; }
+      .price { padding: 18px; }
+      .carousel-dots .dot { width: 12px; height: 12px; }
+    }
+
+    /* Breakpoint ≤ 480px (telefones pequenos) */
+    @media (max-width: 480px){
+      .container { padding: 0 14px; }
+      .hero-badges { gap: 8px; }
+      .depo { min-width: 100%; padding: 16px; }
+      .nav-toggle { width: 40px; height: 40px; }
+      .nav-menu { padding: 14px; }
+    }
+  
+    /* === Tema monocromático e fundo P&B profissional === */
+    body{
+      background:
+        radial-gradient(1200px 600px at 70% -10%, rgba(255,255,255,.08), transparent 60%),
+        radial-gradient(1200px 600px at 20% 120%, rgba(255,255,255,.06), transparent 60%),
+        var(--bg);
+    }
+    .section-hero{
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.72), rgba(0,0,0,.72)),
+        radial-gradient(1200px 600px at 80% -20%, rgba(255,255,255,.06), transparent 60%),
+        var(--bg);
+    }
+    .btn-primary{background:linear-gradient(180deg,#fff,#dcdcdc);color:#000;border-color:rgba(0,0,0,.18)}
+    .btn-primary:hover{filter:brightness(1.02)}
+    .badge,.logo-pill,.card{border-color:rgba(255,255,255,.12)}
+    .hero-chips{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+    .hero-chip{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:16px;text-align:center}
+    .hero-chip b{font-size:18px;letter-spacing:.6px}
+    .hero-chip small{display:block;color:var(--muted);margin-top:4px}
+    .section.light{background:#f7f7f8;color:#0b0b0b}
+    .section.light .muted{color:#3f3f46}
+    .section.light .card{background:#ffffff;border:1px solid rgba(0,0,0,.08);color:#111}
+    .section.light .btn-primary{background:#111;color:#fff;border-color:rgba(255,255,255,.15)}
+    .section.light .btn-ghost{background:#f0f0f0}
+    .value-cta{background:#0c0c0c;color:#fff;padding:18px 22px;border-radius:16px;border:1px solid rgba(255,255,255,.12);text-align:center;font-weight:800}
+    .specialists{background:#ededee}
+    .specialists .stat{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:16px;padding:16px;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+    .specialists .media{background:#0c0c0c;border-radius:18px;overflow:hidden;position:relative;border:1px solid rgba(0,0,0,.12);min-height:260px}
+    .specialists .media::after{content:none}
+    .section.limited{background:#0a0a0a}
+    .section.limited .section-head h2{color:#fff}
+    .section.limited .section-head h2 .accent{color:#ff3b3b}
+    .limited .icon-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);padding:18px;border-radius:16px}
+    .limited .warning{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:18px;border-radius:16px;text-align:center}
+    .section.decision{background:#0a0a0a}
+    .decision .panel{background:linear-gradient(90deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
+  
+    /* ===== Estilo "igual às imagens" (hero central, chips em vidro, CTA capsulado) ===== */
+    .section-hero{padding:88px 0 40px}
+    .section-hero .hero-content{ text-align:center; }
+    .section-hero .hero-actions{ justify-content:center; }
+
+    /* CTA preto com vidro */
+    .btn-cta{ background: rgba(0,0,0,.55); color:#fff; border:1px solid rgba(255,255,255,.35); box-shadow:0 8px 24px rgba(0,0,0,.35); border-radius:14px; backdrop-filter: blur(8px); }
+    .btn-cta:hover{ background: rgba(0,0,0,.7); }
+
+    /* Chips (EXCLUSIVO | PREMIUM | ÚNICO) dentro de cartão translúcido */
+    .hero-chips{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:22px auto 0; max-width:820px; padding:14px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.22); border-radius:16px; box-shadow: var(--shadow); }
+    .hero-chip{ display:flex; flex-direction:column; align-items:center; justify-content:center; padding:10px 6px; border-radius:12px; }
+    .hero-chip b{ font-size: clamp(16px, 3.8vw, 18px); letter-spacing:.6px; }
+    .hero-chip small{ display:block; color:var(--muted); margin-top:4px }
+
+    /* Títulos ultra fortes */
+    .hero-title{ font-weight:900; letter-spacing:.5px }
+    .section-head h2{ font-weight:900 }
+
+    /* Seção "Value" com bloco preto arredondado */
+    .value-cta{ background:#0a0a0a; color:#fff; padding:18px 22px; border-radius:16px; border:1px solid rgba(0,0,0,.6); text-align:center; font-weight:800 }
+
+    /* Specialists */
+    .specialists .media{ background:linear-gradient(180deg,#0e0e0f,#000); min-height:300px }
+    .specialists .media::after{ color:#fff; opacity:.9 }
+    .specialists .stat strong{ font-size:24px }
+
+    /* Oferta limitada (cartões com tom vermelho discreto, como nas imagens) */
+    .limited .icon-card{ background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.12); border-radius:16px; text-align:center }
+    .limited .icon-card h3{ margin:6px 0 6px; font-size:18px }
+    .limited .warning{ background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04)); border:1px solid rgba(255,255,255,.14); }
+
+    /* Seção DECISION com painel dourado e listas ✓ ✗ */
+    .decision .panel{ background: linear-gradient(90deg, rgba(255,215,0,.14), rgba(255,215,0,.06)); border:1px solid rgba(255,215,0,.22); border-radius:16px; padding:18px }
+    .decision .cols{ display:grid; grid-template-columns:1fr 1fr; gap:16px }
+    .decision ul{ list-style:none; padding:0; margin:0; display:grid; gap:8px }
+    .decision li{ display:flex; gap:10px; align-items:flex-start }
+    .decision .ok{ color:#27d27d; font-weight:800 }
+    .decision .no{ color:#ff6b6b; font-weight:800 }
+    .trust{ display:flex; gap:18px; justify-content:center; flex-wrap:wrap; margin-top:12px; color:var(--muted) }
+
+    /* Footer minimalista */
+    .footer-min{ border-top:1px solid rgba(255,255,255,.14); text-align:center; padding:22px 0; color:#c9c9cf }
+
+    /* Responsivo chips/colunas conforme imagens */
+    @media (max-width: 820px){
+      .hero-chips{ grid-template-columns:1fr; }
+      .decision .cols{ grid-template-columns:1fr }
+    }
+  
+    /* FAQ em fundo claro com preto & branco sem tons azuis */
+    .faq.light .acc-item{background:#ffffff;border:1px solid #e5e5e5}
+    .faq.light .acc-summary{color:#111}
+    .faq.light .acc-item[open] .acc-summary{background:#f7f7f7}
+    .faq.light .acc-content{color:#333}
+  
+    /* ===== Responsividade avançada (mobile-first) ===== */
+    h1, h2 { text-wrap: balance; }
+    .hero-content { max-width: 780px; margin-inline: auto; }
+
+    /* Grids sem inline-style */
+    .specialists-grid { grid-template-columns: 1.1fr .9fr; align-items: center; gap: 20px; }
+    @media (max-width: 900px){ .specialists-grid { grid-template-columns: 1fr; } }
+
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+    @media (max-width: 520px){ .stats-grid { grid-template-columns: 1fr; } }
+
+    .limited-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    @media (max-width: 900px){ .limited-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px){ .limited-grid { grid-template-columns: 1fr; } }
+
+    /* Chips responsivas */
+    .hero-chips { grid-template-columns: repeat(3, 1fr); }
+    @media (max-width: 1024px){ .hero-chips { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px){ .hero-chips { grid-template-columns: 1fr; } }
+
+    /* Espaçamentos e tocabilidade */
+    .btn, .acc-summary { min-height: 44px; }
+
+    /* Acessibilidade: reduzir movimento */
+    @media (prefers-reduced-motion: reduce){
+      * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+    }
+  
+    /* ===== BENEFITS (igual ao exemplo da imagem) ===== */
+    .benefits .section-head h2{font-weight:900}
+    .benefits-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    @media(max-width:900px){.benefits-grid{grid-template-columns:1fr}}
+    .benefit-card{display:flex;gap:14px;align-items:flex-start;padding:18px 20px;border-radius:16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.16);box-shadow:var(--shadow)}
+    .benefit-icon{min-width:32px;height:32px;border-radius:999px;display:grid;place-items:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);font-weight:900}
+    .benefit-title{margin:0 0 4px;font-size:18px;font-weight:800}
+    .benefit-sub{margin:0;color:var(--muted)}
+    .valuation{margin-top:24px;padding:22px;border-radius:16px;background:linear-gradient(90deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.16);text-align:center;box-shadow:var(--shadow)}
+    .valuation h3{margin:0 0 6px;font-size:20px;font-weight:900}
+  
+    /* ===== Oferta Limitada — estilo igual à imagem ===== */
+    .section.limited{padding-top:48px}
+    .section.limited .section-head p{color:#d9d9df}
+    .limited .limited-grid{margin-top:18px}
+
+    .limited .icon-card{
+      background:linear-gradient(180deg, rgba(255,64,64,.08), rgba(255,64,64,.06));
+      border:1px solid rgba(255,64,64,.35);
+      border-radius:16px; box-shadow:0 6px 18px rgba(255,64,64,.06);
+      padding:20px; display:grid; gap:10px; align-content:start;
+    }
+    .limited .icon-card .ic{
+      width:40px;height:40px;border-radius:999px;display:grid;place-items:center;margin:0 auto 6px;
+      background:rgba(255,64,64,.10);border:1px solid rgba(255,64,64,.35);
+    }
+    .limited .icon-card svg{width:20px;height:20px;fill:#ff5a5a;opacity:.95}
+    .limited .icon-card h3{margin:0;text-align:center}
+    .limited .icon-card p{margin:0;text-align:center;color:#c9c9cf}
+
+    .limited .warning{
+      background:linear-gradient(180deg, rgba(100,0,0,.55), rgba(60,0,0,.45));
+      border:1px solid rgba(255,64,64,.30); color:#eee;
+    }
+    .limited .warning strong{color:#ff6b6b;display:block;margin-bottom:8px}
+    .limited .warning .y{color:#ffdf59;margin-right:8px}
+
+    .limited .cta-wrap{text-align:center;margin-top:18px}
+    .limited .glow-cta{background:linear-gradient(180deg,#3a3a3a,#1a1a1a);color:#fff;border-color:rgba(255,255,255,.30);box-shadow:none;position:relative;transition:box-shadow .22s ease, transform .08s ease}
+    .limited .glow-cta:active{transform:scale(.98)}
+    .limited .glow-cta:focus-visible{outline:2px solid rgba(255,255,255,.35);outline-offset:2px}
+    .limited .section-head .emphasis{color:#fff;font-weight:800;margin-top:6px}
+    .limited .cta-note{margin-top:10px;color:#9e9ea6;font-size:13px}
+  
+    /* ===== Glow branco somente ao clicar ===== */
+    .limited .glow-cta.flash{ box-shadow:0 22px 60px rgba(255,255,255,.30), 0 0 110px rgba(255,255,255,.30); animation:glowPulse .55s ease-out; }
+    .limited .glow-cta::after{ content:""; position:absolute; inset:-2px; border-radius:inherit; pointer-events:none; opacity:0; }
+    .limited .glow-cta.flash::after{ animation:halo .55s ease-out; }
+    @keyframes glowPulse{ 0%{ box-shadow:0 0 0 rgba(255,255,255,0) } 35%{ box-shadow:0 28px 80px rgba(255,255,255,.35), 0 0 140px rgba(255,255,255,.35) } 100%{ box-shadow:none } }
+    @keyframes halo{ 0%{ box-shadow:0 0 0 0 rgba(255,255,255,0); opacity:0 } 25%{ box-shadow:0 0 32px 14px rgba(255,255,255,.28); opacity:1 } 100%{ box-shadow:0 0 0 0 rgba(255,255,255,0); opacity:0 } }
+  
+    /* === "Acesso Exclusivo" com imagem própria (figure + figcaption) === */
+    .exclusive-media{border-radius:18px;overflow:hidden;position:relative;box-shadow:var(--shadow);border:1px solid rgba(0,0,0,.12);min-height:260px;background:#0b0b0b}
+    .exclusive-media img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(0) contrast(1.05)}
+    .exclusive-media::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%, rgba(0,0,0,.68) 90%)}
+    .exclusive-media figcaption{position:absolute;left:16px;bottom:16px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+    .exclusive-media figcaption strong{display:block;font-weight:900;letter-spacing:.6px;font-size:clamp(18px,2.6vw,24px)}
+    .exclusive-media figcaption span{display:block;font-size:clamp(12px,2vw,14px);color:#e7e7ea;margin-top:2px}
   </style>
 </head>
 <body>
@@ -208,7 +426,7 @@
           <path d="M12 2l9 5v10l-9 5-9-5V7l9-5z" />
           <path d="M12 7l5 3v4l-5 3-5-3V10l5-3z" class="brand-core"/>
         </svg>
-        <span class="brand-text">Mentoria Black</span>
+        <span class="brand-text">Material Black</span>
       </a>
 
       <nav class="nav" aria-label="Primária">
@@ -219,10 +437,6 @@
           <span class="sr-only">Abrir menu</span>
         </button>
         <ul id="nav-menu" class="nav-menu">
-          <li><a href="#features">Recursos</a></li>
-          <li><a href="#pricing">Planos</a></li>
-          <li><a href="#testimonials">Resultados</a></li>
-          <li><a href="#faq">FAQ</a></li>
           <li class="nav-cta"><a class="btn btn-primary" href="#checkout">Assinar por R$29,99</a></li>
         </ul>
       </nav>
@@ -234,21 +448,16 @@
     <section class="section-hero">
       <div class="container hero-inner">
         <div class="hero-content">
-          <h1 class="hero-title">
-            Construa caixa rápido.<br class="hide-sm">
-            Escale com segurança.
-          </h1>
-          <p class="hero-subtitle">
-            Aulas curtas, modelos prontos e call quinzenal para você bater R$10–25k/mês no digital com ofertas validadas.
-          </p>
+          <h1 class="hero-title">MATERIAL<br class="hide-sm"> BLACK</h1>
+          <p class="hero-subtitle">O arsenal exclusivo que os especialistas em tráfego pago não querem que você conheça.<br><strong>Acesso limitado. Resultados ilimitados.</strong></p>
           <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" href="#checkout">Entrar na mentoria</a>
-            <a class="btn btn-ghost btn-lg" href="#features">Ver como funciona</a>
+            <a class="btn btn-cta btn-lg" href="#checkout">Quero garantir meu Material Black agora</a>
+            
           </div>
-          <div class="hero-badges">
-            <span class="badge">Conteúdo prático</span>
-            <span class="badge">Templates plug & play</span>
-            <span class="badge">Call em grupo 2x/mês</span>
+          <div class="hero-chips">
+            <div class="hero-chip"><b>EXCLUSIVO</b><small>Acesso limitado</small></div>
+            <div class="hero-chip"><b>PREMIUM</b><small>Ferramentas profissionais</small></div>
+            <div class="hero-chip"><b>ÚNICO</b><small>Ninguém mais tem</small></div>
           </div>
         </div>
         <div class="hero-media">
@@ -278,60 +487,143 @@
       <div class="hero-gradient" aria-hidden="true"></div>
     </section>
 
-    <!-- Logos/social proof -->
-    <section class="section-logos">
-      <div class="container logos-inner">
-        <p class="muted">Conteúdo aplicável para:</p>
-        <div class="logos-row" role="list" aria-label="Tipos de operação">
-          <div role="listitem" class="logo-pill">Seguidores</div>
-          <div role="listitem" class="logo-pill">Hot/Adulto</div>
-          <div role="listitem" class="logo-pill">Assinaturas</div>
-          <div role="listitem" class="logo-pill">Funis Telegram</div>
-          <div role="listitem" class="logo-pill">Tráfego Pago</div>
+    
+
+    <!-- Value Proposition (light) -->
+    <section class="section light value">
+      <div class="container">
+        <header class="section-head">
+          <h2>Isso é o que você estava procurando</h2>
+          <p class="muted">O Material Black não é apenas mais um curso. É a chave mestra para quem quer dominar o tráfego pago de verdade.</p>
+          <p class="muted">Enquanto outros vendem promessas vazias, nós entregamos <strong>ferramentas premium</strong>, <strong>estratégias Black</strong> e <strong>acesso exclusivo</strong> ao que realmente funciona.</p>
+        </header>
+        <div class="value-cta">A pergunta não é se você pode se dar ao luxo de ter o Material Black...<br><span style="font-size:20px;display:block;margin-top:6px">A pergunta é: você pode se dar ao luxo de <strong>NÃO</strong> ter?</span></div>
+      </div>
+    </section>
+
+    <!-- Specialists (light) -->
+    <section class="section light specialists">
+      <div class="container">
+        <div class="grid specialists-grid">
+          <div>
+            <h2>Criado por especialistas em tráfego pago</h2>
+            <p><strong>Anos de experiência</strong> em campanhas que movimentaram <strong>milhões de reais</strong> em investimento publicitário.</p>
+            <p><strong>Estratégias testadas</strong> em centenas de nichos — de e‑commerce a infoprodutos de alto ticket.</p>
+            <p><strong>Resultados comprovados</strong> com cases reais de clientes que multiplicaram seus faturamentos.</p>
+            <div class="grid stats-grid">
+              <div class="stat"><strong>500+</strong><br><small>Campanhas otimizadas</small></div>
+              <div class="stat"><strong>R$ 50M+</strong><br><small>Em investimento gerido</small></div>
+            </div>
+          </div>
+          <figure class="media exclusive-media" aria-label="Acesso exclusivo — imagem configurável">
+              <!-- Troque a URL abaixo pela sua imagem (JPG/PNG/WEBP). Ex.: https://meusite.com/cofre.jpg -->
+              <img src="https://images.unsplash.com/photo-1527443154391-507e9dc6c5cc?q=80&w=1200&auto=format&fit=crop" alt="Acesso exclusivo — cofre preto" loading="lazy" />
+              <figcaption>
+                <strong>ACESSO EXCLUSIVO</strong>
+                <span>Estratégias Black reveladas</span>
+              </figcaption>
+            </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Limited Offer (dark) -->
+    <section class="section limited">
+      <div class="container">
+        <header class="section-head">
+          <h2><span class="accent">ATENÇÃO:</span> Oferta Limitada</h2>
+          <p class="muted">O Material Black não será disponibilizado sempre.</p>
+          <p class="emphasis">Poucos terão acesso. Garanta antes que acabe.</p>
+        </header>
+        <div class="grid limited-grid">
+          <div class="icon-card">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 1.75a10.25 10.25 0 1 0 0 20.5 10.25 10.25 0 0 0 0-20.5Zm.75 5.5h-1.5v6l5 3 .75-1.23-4.25-2.52V7.25Z"/></svg></div>
+            <h3>Tempo Limitado</h3>
+            <p class="muted">Oferta exclusiva por tempo determinado</p>
+          </div>
+          <div class="icon-card">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0Zm-12 9a6 6 0 1 1 12 0H4Zm13.5-9a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2.5 9c0-2.32-1.2-4.36-3-5.54 2.87.13 5 2.52 5 5.54h-2Z"/></svg></div>
+            <h3>Vagas Limitadas</h3>
+            <p class="muted">Apenas poucos terão acesso</p>
+          </div>
+          <div class="icon-card">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M17 9h-1V7a4 4 0 1 0-8 0v2H7a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-9a2 2 0 0 0-2-2Zm-6 0V7a2 2 0 1 1 4 0v2h-4Z"/></svg></div>
+            <h3>Acesso Exclusivo</h3>
+            <p class="muted">Conteúdo não disponível em outros lugares</p>
+          </div>
+        </div>
+        <div class="warning" style="margin-top:18px">
+          <strong><span class="y">⚠</span> ÚLTIMA CHANCE</strong>
+          <p>Depois que essa oferta sair do ar, pode ser que você nunca mais tenha a oportunidade de acessar o Material Black.</p>
+          <p class="muted">Não deixe para depois. Não espere por uma “próxima vez” que pode nunca vir.</p>
+        </div>
+        <div class="cta-wrap">
+          <a href="#checkout" class="btn btn-cta btn-lg glow-cta">GARANTIR ACESSO AGORA 🔥</a>
+          <div class="cta-note">Clique no botão acima e garanta seu acesso antes que seja tarde demais</div>
         </div>
       </div>
     </section>
 
     <!-- Features -->
-    <section id="features" class="section features">
+    <section id="features" class="section benefits">
       <div class="container">
         <header class="section-head">
-          <h2>O que você recebe por R$29,99/mês</h2>
-          <p class="muted">Tudo que você precisa para sair do zero ao caixa, sem enrolação.</p>
+          <h2>O que você terá acesso no<br>MATERIAL BLACK</h2>
         </header>
 
-        <div class="grid features-grid">
-          <article class="card feature">
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24"><path d="M4 4h16v4H4zM4 10h10v10H4zM16 10h4v10h-4z"/></svg>
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-icon">✓</div>
+            <div>
+              <h3 class="benefit-title">Acesso ao ChatGPT Plus</h3>
+              <p class="benefit-sub">IA premium para otimizar suas campanhas</p>
             </div>
-            <h3>Templates prontos</h3>
-            <p>Copys, criativos e estruturas validadas para lançar em horas, não semanas.</p>
           </article>
 
-          <article class="card feature">
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3 8-7 10-4-2-7-5-7-10V6l7-4z"/></svg>
+          <article class="benefit-card">
+            <div class="benefit-icon">✓</div>
+            <div>
+              <h3 class="benefit-title">Canva Pro liberado</h3>
+              <p class="benefit-sub">Criações profissionais sem limites</p>
             </div>
-            <h3>Aulas objetivas</h3>
-            <p>Vídeos curtos focados em execução: oferta, contingência e escala.</p>
           </article>
 
-          <article class="card feature">
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <article class="benefit-card">
+            <div class="benefit-icon">✓</div>
+            <div>
+              <h3 class="benefit-title">Contas de streaming exclusivas</h3>
+              <p class="benefit-sub">Entretenimento premium incluído</p>
             </div>
-            <h3>Calendário de ações</h3>
-            <p>Roteiro semanal: poste, capte, venda — repetível e medível.</p>
           </article>
 
-          <article class="card feature">
-            <div class="icon-circle">
-              <svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 110 10 5 5 0 010-10z"/><path d="M12 1v3M12 20v3M1 12h3M20 12h3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2"/></svg>
+          <article class="benefit-card">
+            <div class="benefit-icon">✓</div>
+            <div>
+              <h3 class="benefit-title">Criações de sites Black</h3>
+              <p class="benefit-sub">Templates exclusivos de alta conversão</p>
             </div>
-            <h3>Suporte em grupo</h3>
-            <p>Call em grupo a cada 2 semanas + dúvidas no chat.</p>
           </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">✓</div>
+            <div>
+              <h3 class="benefit-title">Aulas completas de Tráfego Pago</h3>
+              <p class="benefit-sub">Estratégias avançadas dos especialistas</p>
+            </div>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">✓</div>
+            <div>
+              <h3 class="benefit-title">Modelagem de ofertas Black</h3>
+              <p class="benefit-sub">Métodos secretos para ofertas irresistíveis</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="valuation">
+          <h3>Mais de R$ 5.000 em valor</h3>
+          <p class="muted">Ferramentas e estratégias que custam milhares no mercado, reunidas em um só lugar</p>
         </div>
       </div>
     </section>
@@ -340,22 +632,11 @@
     <section id="pricing" class="section pricing">
       <div class="container">
         <header class="section-head">
-          <h2>Planos</h2>
-          <p class="muted">Comece pelo básico e evolua quando fizer sentido.</p>
+          <h2>Plano</h2>
+          <p class="muted">Acesso completo ao Material Black.</p>
         </header>
 
         <div class="grid pricing-grid">
-          <article class="card price">
-            <h3>Start</h3>
-            <p class="price-value">R$ <strong>0</strong><span>/mês</span></p>
-            <ul class="price-list">
-              <li>1 aula liberada</li>
-              <li>1 template de copy</li>
-              <li>Sem call</li>
-            </ul>
-            <a href="#checkout" class="btn btn-ghost full">Começar</a>
-          </article>
-
           <article class="card price highlight" aria-label="Plano recomendado">
             <div class="pill">Mais popular</div>
             <h3>Mentoria</h3>
@@ -369,109 +650,76 @@
             <!-- COLE O SEU LINK DE CHECKOUT AQUI -->
             <a id="checkout" href="https://seu-checkout-aqui.com" class="btn btn-primary full" target="_blank" rel="noopener">Assinar agora</a>
           </article>
-
-          <article class="card price">
-            <h3>Pro+</h3>
-            <p class="price-value">R$ <strong>97</strong><span>/mês</span></p>
-            <ul class="price-list">
-              <li>Tudo do Mentoria</li>
-              <li>Biblioteca premium</li>
-              <li>Vagas para testes</li>
-            </ul>
-            <a href="#checkout" class="btn btn-ghost full">Quero evoluir</a>
-          </article>
         </div>
         <p class="footnote">Sem fidelidade. Cancele quando quiser.</p>
       </div>
     </section>
 
     <!-- Testimonials -->
-    <section id="testimonials" class="section testimonials">
-      <div class="container">
-        <header class="section-head">
-          <h2>Resultados da comunidade</h2>
-          <p class="muted">Prova real do campo de batalha.</p>
-        </header>
-
-        <div class="carousel" data-autoplay="true" aria-label="Depoimentos">
-          <div class="carousel-track">
-            <figure class="card depo">
-              <blockquote>“Saí do zero para R$ 1.2k/dia em 9 dias com o template de seguidores.”</blockquote>
-              <figcaption>— Daniel • São Paulo</figcaption>
-            </figure>
-            <figure class="card depo">
-              <blockquote>“Primeira campanha hot: 84 vendas em 48h. Só repliquei o fluxo.”</blockquote>
-              <figcaption>— Larissa • Recife</figcaption>
-            </figure>
-            <figure class="card depo">
-              <blockquote>“Com a rotina semanal fechei 312 assinantes a R$29,9 em 30 dias.”</blockquote>
-              <figcaption>— Igor • Curitiba</figcaption>
-            </figure>
-          </div>
-
-          <div class="carousel-dots" role="tablist" aria-label="Navegação de depoimentos">
-            <button class="dot active" aria-label="Slide 1" aria-selected="true"></button>
-            <button class="dot" aria-label="Slide 2"></button>
-            <button class="dot" aria-label="Slide 3"></button>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- FAQ -->
-    <section id="faq" class="section faq">
+    <section id="faq" class="section faq light">
       <div class="container">
         <header class="section-head">
-          <h2>Perguntas frequentes</h2>
+          <h2>Perguntas Frequentes</h2>
         </header>
-
-        <div class="accordion" role="tablist">
-          <details class="acc-item">
-            <summary class="acc-summary">Quando acontecem as calls?</summary>
-            <div class="acc-content">Quinzenalmente (duas por mês). O cronograma é fixado no grupo.</div>
-          </details>
-
-          <details class="acc-item">
-            <summary class="acc-summary">Tem garantia?</summary>
-            <div class="acc-content">Plano recorrente sem fidelidade. Pode cancelar quando quiser direto no checkout.</div>
-          </details>
-
-          <details class="acc-item">
-            <summary class="acc-summary">Funciona para iniciantes?</summary>
-            <div class="acc-content">Sim. O foco é execução passo a passo com modelos prontos.</div>
-          </details>
+        <div class="accordion">
+          <details class="acc-item"><summary class="acc-summary">O que é o Material Black?</summary><div class="acc-content">É um arsenal prático de estratégias, ferramentas e templates para tráfego pago.</div></details>
+          <details class="acc-item"><summary class="acc-summary">Como funciona o acesso?</summary><div class="acc-content">Acesso imediato após confirmar seu pagamento no checkout.</div></details>
+          <details class="acc-item"><summary class="acc-summary">Por que ele é exclusivo?</summary><div class="acc-content">Porque reúne processos proprietários e metodologias usadas por especialistas.</div></details>
+          <details class="acc-item"><summary class="acc-summary">Quanto tempo terei acesso aos benefícios?</summary><div class="acc-content">Enquanto sua assinatura estiver ativa, com atualizações inclusas.</div></details>
+          <details class="acc-item"><summary class="acc-summary">É realmente limitado?</summary><div class="acc-content">Sim. Trabalhamos com janelas de abertura e vagas por turma.</div></details>
+          <details class="acc-item"><summary class="acc-summary">Funciona para qualquer nicho?</summary><div class="acc-content">Aplicável a vários nichos: e‑commerce, infoprodutos, assinaturas e mais.</div></details>
         </div>
       </div>
     </section>
 
     <!-- CTA final -->
-    <section class="section-cta">
-      <div class="container cta-inner">
-        <h2>Pronto pra sair do zero ao caixa?</h2>
-        <p class="muted">Entre hoje, pegue os templates e apareça na próxima call.</p>
-        <a class="btn btn-primary btn-lg" href="#checkout">Garantir minha vaga por R$29,99</a>
+    
+
+    <!-- DECISION -->
+    <section class="section decision">
+      <div class="container">
+        <header class="section-head">
+          <h2>A decisão está em suas mãos</h2>
+          <p class="muted">Você nunca mais verá algo igual. Enquanto outros ficam na mediocridade, você pode ter acesso às <strong>ferramentas premium</strong> e <strong>estratégias avançadas</strong> que fazem a diferença.</p>
+        </header>
+        <div class="panel">
+          <h3 style="text-align:center;margin:0 0 10px">⚡ ÚLTIMA OPORTUNIDADE ⚡</h3>
+          <div class="cols">
+            <div>
+              <h4>Se você GARANTIR agora:</h4>
+              <ul>
+                <li><span class="ok">✓</span> Acesso imediato a tudo</li>
+                <li><span class="ok">✓</span> Ferramentas premium</li>
+                <li><span class="ok">✓</span> Estratégias exclusivas reveladas</li>
+                <li><span class="ok">✓</span> Suporte especializado</li>
+                <li><span class="ok">✓</span> Updates futuros inclusos</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Se você DEIXAR passar:</h4>
+              <ul>
+                <li><span class="no">✗</span> Perda da oportunidade única</li>
+                <li><span class="no">✗</span> Volta aos métodos comuns</li>
+                <li><span class="no">✗</span> Concorrência fica à frente</li>
+                <li><span class="no">✗</span> Pode nunca mais ter chance</li>
+                <li><span class="no">✗</span> Arrependimento futuro</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:18px">
+          <a class="btn btn-cta btn-lg" href="#checkout">QUERO MEU ACESSO EXCLUSIVO AGORA</a>
+          <div class="trust"><span>Pagamento 100% seguro</span> • <span>Acesso instantâneo</span> • <span>Exclusivo e limitado</span></div>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="brand-row">
-        <a class="brand" href="#top" aria-label="Início">
-          <svg width="24" height="24" viewBox="0 0 24 24" class="brand-icon"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"/><path d="M12 7l5 3v4l-5 3-5-3V10l5-3z" class="brand-core"/></svg>
-          <span class="brand-text">Mentoria Black</span>
-        </a>
-        <p class="muted">© <span id="year"></span> Mentoria Black. Todos os direitos reservados.</p>
-      </div>
-      <ul class="footer-links">
-        <li><a href="#features">Recursos</a></li>
-        <li><a href="#pricing">Planos</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#checkout">Assinar</a></li>
-      </ul>
-    </div>
-  </footer>
+  <footer class="footer-min"><div class="container"><small>Material Black — Exclusivo para especialistas em tráfego pago</small></div></footer>
 
   <span class="sr-only" id="announce" aria-live="polite"></span>
 
@@ -481,7 +729,7 @@
     const $$ = (sel, ctx=document) => [...ctx.querySelectorAll(sel)];
 
     // Ano no footer
-    $('#year').textContent = new Date().getFullYear();
+    const yearEl = $('#year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     // Menu mobile
     const navToggle = $('.nav-toggle');
@@ -519,47 +767,25 @@
     });
 
     // Animar cards ao entrar na viewport
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(ent=>{
-        if(ent.isIntersecting){
-          ent.target.animate(
-            [{transform:'translateY(10px)',opacity:.0},{transform:'translateY(0)',opacity:1}],
-            {duration:400,easing:'ease',fill:'forwards'}
-          );
-          io.unobserve(ent.target);
-        }
-      });
-    },{threshold:.12});
-    $$('.feature, .price, .depo, .acc-item').forEach(el=>io.observe(el));
+    let io = null; const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced && 'IntersectionObserver' in window){
+      io = new IntersectionObserver((entries)=>{
+        entries.forEach(ent=>{
+          if(ent.isIntersecting){
+            ent.target.animate(
+              [{transform:'translateY(10px)',opacity:.0},{transform:'translateY(0)',opacity:1}],
+              {duration:400,easing:'ease',fill:'forwards'}
+            );
+            io.unobserve(ent.target);
+          }
+        });
+      },{threshold:.12});
+      $$('.feature, .price, .acc-item').forEach(el=>io.observe(el));
+    }
 
     // Carousel bem simples (auto + dots)
     (function(){
       const carousel = $('.carousel');
       if (!carousel) return;
       const track = $('.carousel-track', carousel);
-      const dots  = $$('.carousel-dots .dot', carousel);
-      const slides = $$('.depo', carousel);
-
-      let idx = 0;
-      const update = () => {
-        const w = slides[0].getBoundingClientRect().width + 18; // +gap
-        track.style.transform = `translateX(${-idx * w}px)`;
-        dots.forEach((d,i)=>d.classList.toggle('active', i===idx));
-      };
-
-      dots.forEach((d,i)=> d.addEventListener('click',()=>{
-        idx = i; update();
-      }));
-
-      const autoplay = carousel.dataset.autoplay === 'true';
-      if (autoplay){
-        setInterval(()=>{
-          idx = (idx + 1) % slides.length;
-          update();
-        }, 3500);
-      }
-      update();
-    })();
-  </script>
-</body>
-</html>
+      const dots  = $$('.carousel-dots .dot'
