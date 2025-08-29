@@ -267,10 +267,10 @@
     .section.limited{background:#0a0a0a}
     .section.limited .section-head h2{color:#fff}
     .section.limited .section-head h2 .accent{color:#ff3b3b}
-    .limited .icon-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);padding:18px;border-radius:16px;text-align:center}
+    .limited .icon-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.12);padding:18px;border-radius:16px}
     .limited .warning{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:18px;border-radius:16px;text-align:center}
     .section.decision{background:#0a0a0a}
-    .decision .panel{background:linear-gradient(90deg,rgba(255,255,0,.14),rgba(255,255,0,.06));border:1px solid rgba(255,215,0,.22);border-radius:16px;padding:18px}
+    .decision .panel{background:linear-gradient(90deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px}
   
     /* ===== Estilo "igual às imagens" (hero central, chips em vidro, CTA capsulado) ===== */
     .section-hero{padding:88px 0 40px}
@@ -329,32 +329,34 @@
     /* ===== Logo de topo (imagem) ===== */
     .brand-logo{height:clamp(26px,4.5vw,36px);width:auto;display:block;filter:drop-shadow(0 20px 28px rgba(0,0,0,.35))}
 
-    /* =========================
-       AJUSTE DO TOPO (PEDIDO)
-       ========================= */
-    /* Não altera estrutura; apenas garante logo visível e CTA compacto */
-    .header-inner{ display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:nowrap; }
-    .brand{ min-width:0; }
+    /* ====== PATCH SOLICITADO: AJUSTE TOPO (logo + botão) ====== */
+    /* Base/desktop */
     .brand-logo{ width:auto; height:auto; max-height:36px; flex-shrink:0; }
-
-    /* CTA do topo mais compacto */
     .site-header .nav-cta .btn{
       padding:8px 12px; font-size:14px; line-height:1; min-height:36px; border-radius:12px;
     }
-
-    @media (max-width: 980px){ .brand-logo{ max-height:32px; } }
-    @media (max-width: 640px){
-      .brand-logo{ max-height:28px; }
-      .container{ padding: 0 14px; }
-      .header-inner{ gap:8px; }
-      .site-header .nav-cta .btn{
-        padding:6px 10px; font-size:12px; min-height:32px; max-width:48vw; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;
+    /* Mobile até 820px: deixa menu inline e botão compacto (não ocupa 100%) */
+    @media (max-width: 820px){
+      .nav-menu{
+        position: static; inset:auto; padding:0; background:transparent; border:0;
+        transform:none !important; flex-direction:row; align-items:center; gap:10px;
       }
+      .nav-toggle{ display:none; }      /* esconde hamburguer (só 1 CTA) */
+      .nav-cta{ width:auto; }
+      .nav-cta .btn{
+        width:auto; padding:6px 10px; font-size:12px; min-height:32px; border-radius:12px;
+      }
+      .header-inner{ min-height:56px; gap:10px; }
+      .container{ padding:0 14px; }
+      .brand-logo{ max-height:28px; }
     }
+    /* Celulares bem pequenos */
     @media (max-width: 420px){
+      .nav-cta .btn{ padding:6px 8px; font-size:11px; }
       .brand-logo{ max-height:24px; }
-      .site-header .nav-cta .btn{ padding:6px 8px; font-size:11px; max-width:44vw; }
     }
+    /* ====== FIM DO PATCH ====== */
+
   </style>
 </head>
 <body>
@@ -721,8 +723,12 @@
       $$('.feature, .price, .acc-item').forEach(el=>io.observe(el));
     }
 
-    /* OBS: O trecho de "carousel" estava cortado no código enviado e causava erro de sintaxe.
-       Mantive somente o que você já usa para não quebrar os outros scripts. */
+    // Carousel bem simples (auto + dots)
+    (function(){
+      const carousel = $('.carousel');
+      if (!carousel) return;
+      const track = $('.carousel-track', carousel);
+      const dots  = $$('.carousel-dots .dot'
   </script>
 </body>
 </html>
